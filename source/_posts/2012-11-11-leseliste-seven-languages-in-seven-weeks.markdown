@@ -3,6 +3,7 @@ layout: post
 title: "Leseliste - Seven Languages in Seven Weeks"
 date: 2012-11-11 19:52
 comments: true
+author: Marco
 categories: 
 ---
 Das Lernen neuer (Programmier-)Sprachen geht wesentlich besser von der Hand, wenn man erstmal einen einfachen Einstieg in die Basics bekommen hat. Der Einstieg muss nicht sonderlich tief sein. Wichtig ist es, schnell zu ersten Erfolgserlebnissen in Form kleiner, lauffähiger Programme zu kommen. Darauf baut es sich leicht auf, ohne dass irgendwo auf dem Weg allzu großer Frust aufkommt. Ich halte Weniges für schlimmer als sich erstmal durch große Mengen Specs wühlen zu müssen ehe man mit den ersten Codieraufgaben anfangen kann.  

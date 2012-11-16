@@ -3,6 +3,7 @@ layout: post
 title: "Twitter Favs"
 date: 2012-11-11 19:52
 comments: true
+author: Marco
 categories: [twitter, favs, news] 
 ---
 <a class="twitter-timeline" href="https://twitter.com/magomi/favorites" data-widget-id="267696520365752320">Favorite Tweets by @magomi</a>
