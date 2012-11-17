@@ -4,7 +4,7 @@
   <title><![CDATA[Code from Hell]]></title>
   <link href="http://code-from-hell.org/atom.xml" rel="self"/>
   <link href="http://code-from-hell.org/"/>
-  <updated>2012-11-16T21:27:27+01:00</updated>
+  <updated>2012-11-17T15:35:33+01:00</updated>
   <id>http://code-from-hell.org/</id>
   <author>
     <name><![CDATA[Marco Grunert]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress-Blog im Github-Repository verwalten]]></title>
+    <link href="http://code-from-hell.org/blog/2012/11/17/octopress-blog-im-github-repository-verwalten/"/>
+    <updated>2012-11-17T14:07:00+01:00</updated>
+    <id>http://code-from-hell.org/blog/2012/11/17/octopress-blog-im-github-repository-verwalten</id>
+    <content type="html"><![CDATA[<p>Das gesamte Blog kann an sich ohne weiteres in einem Github-Repository verwaltet werden:</p>
+
+<ul>
+<li>  neues Repository auf GitHub einrichten,</li>
+<li>  im lokalen Octopress-Verzeichnis die URL des Repositories setzten (&#8220;git init &amp;&amp; git config remote.origin.url &lt;url.des.github.repo>&#8221;),</li>
+<li>  den initialen Stand commiten (&#8220;git add . &amp;&amp; git commit -a -m &#8216;&lt;commit.message>&#8217;&#8221;),</li>
+<li>  den aktuellen Stand auf den Server pushen (&#8220;git push origin master:master&#8221;).</li>
+</ul>
+
+
+<p>In den Admin-Einstellungen des Repositories auf GitHub kann man andere Nutzer mit Schreibberechtigung hinzufügen. Fertig ist das Mehrbenutzer-Blog.</p>
+
+<p>Das Deployment auf dem Zielserver kann auch direkt aus dem github-Repository erfolgen. Leider geht das nicht ganz so komfortabel, wie wenn man das Blog direkt via <a href="http://octopress.org/docs/deploying/github/">github-Pages betreibt</a>. Der eigentliche Inhalt des Blogs liegt im Unterverzeichnis &#8220;public&#8221;. Grundsätzlich würde es also ausreichen, dieses Unterverzeichnis auszuchecken. Derartige sparse clones werden von git nicht unterstützt. Bleibt also nur, das gesamte Repository auf dem Zielserver auszuchecken und den Webserver nur auf das public Verzeichnis verweisen zu lassen. Einer der großen Vorteile, den Blog auf github-Pages zu betreiben liegt darin, dass bei einem push ins Repository auch gleich der Blogcontent aktualisiert wird. Mit einem kleinen Skript und einem Github-Hook lässt sich das aber recht einfach auf dem eigenen Server nachbauen. Man nehme:</p>
+
+<ul>
+<li><p>  ein Skript, dass ins lokale Repository auf dem Webserver wechselt und via &#8220;git pull&#8230;&#8221; den aktuellen Stand auscheckt</p>
+
+<pre><code> #!/bin/sh
+
+ cd /home/serveradmin/website/codefromhell/
+ git pull --rebase
+ cd -
+</code></pre></li>
+<li><p>  einen Mini-Webserver, der von einem Github-Hook angesprochen werden kann und das update-Skript aufruft</p>
+
+<pre><code> require 'socket'
+
+ server = TCPServer.new(2000)
+
+ puts "#{Time.now} - listener started"
+
+ while (session = server.accept)
+     session.print "HTTP/1.1 200 OK\r\n#{Time.now}\r\nServer: UpdateNotificationListener\r\nContent-Type: text/html\r\n\r\n"
+     requestPars = session.gets.chomp.split
+     requestMethod = requestPars[0]
+     requestUrl = requestPars[1]
+     requestProt = requestPars[2]
+     puts "#{Time.now} - request recieved: #{requestMethod} #{requestUrl} #{requestProt}"
+     if requestMethod == "POST" &amp;&amp; requestUrl == "/checkForNewVersion"
+         puts "#{Time.now} - start update of the repository..."
+         system('/home/serveradmin/website/updater/update_code-from-hell.org.sh')
+         puts "#{Time.now} - ...update done"
+     end 
+     session.print "&lt;html&gt;thanks, bye&lt;/html&gt;"
+     session.close
+ end
+</code></pre></li>
+<li><p>  einen github-WebHook, der auf die passende URL zeigt: http://code-from-hell.org:2000/checkForNewVersion</p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Twitter Favs]]></title>
