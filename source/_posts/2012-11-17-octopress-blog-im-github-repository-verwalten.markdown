@@ -19,36 +19,40 @@ Das Deployment auf dem Zielserver kann auch direkt aus dem github-Repository erf
 
   *   ein Skript, dass ins lokale Repository auf dem Webserver wechselt und via "git pull..." den aktuellen Stand auscheckt
 
-         #!/bin/sh
-
-         cd /home/serveradmin/website/codefromhell/
-         git pull --rebase
-         cd -
+     {% codeblock update_code-from-hell.org.sh lang:bash %}
+#!/bin/sh
+cd /home/serveradmin/website/codefromhell/
+git pull --rebase
+cd -
+     {% endcodeblock %}
 
   *   einen Mini-Webserver, der von einem Github-Hook angesprochen werden kann und das update-Skript aufruft
 
-         require 'socket'
+     {% codeblock httpsrv.rb lang:ruby %}
+require 'socket'
 
-         server = TCPServer.new(2000)
+server = TCPServer.new(2000)
 
-         puts "#{Time.now} - listener started"
+puts "#{Time.now} - listener started"
 
-         while (session = server.accept)
-             session.print "HTTP/1.1 200 OK\r\n#{Time.now}\r\nServer: UpdateNotificationListener\r\nContent-Type: text/html\r\n\r\n"
-             requestPars = session.gets.chomp.split
-             requestMethod = requestPars[0]
-             requestUrl = requestPars[1]
-             requestProt = requestPars[2]
-             puts "#{Time.now} - request recieved: #{requestMethod} #{requestUrl} #{requestProt}"
-             if requestMethod == "POST" && requestUrl == "/checkForNewVersion"
-                 puts "#{Time.now} - start update of the repository..."
-                 system('/home/serveradmin/website/updater/update_code-from-hell.org.sh')
-                 puts "#{Time.now} - ...update done"
-             end 
-             session.print "<html>thanks, bye</html>"
-             session.close
-         end
+while (session = server.accept)
+   session.print "HTTP/1.1 200 OK\r\n#{Time.now}\r\nServer: UpdateNotificationListener\r\nContent-Type: text/html\r\n\r\n"
+   requestPars = session.gets.chomp.split
+   requestMethod = requestPars[0]
+   requestUrl = requestPars[1]
+   requestProt = requestPars[2]
+   puts "#{Time.now} - request recieved: #{requestMethod} #{requestUrl} #{requestProt}"
+   if requestMethod == "POST" && requestUrl == "/checkForNewVersion"
+       puts "#{Time.now} - start update of the repository..."
+       system('/home/serveradmin/website/updater/update_code-from-hell.org.sh')
+       puts "#{Time.now} - ...update done"
+   end 
+   session.print "<html>thanks, bye</html>"
+   session.close
+end
+     {% endcodeblock %}
 
-  *   einen github-WebHook, der auf die passende URL zeigt: http://code-from-hell.org:2000/checkForNewVersion
+  *   einen github-WebHook, der auf die passende URL zeigt:
 
+      {% img /images/code-from-hell/webhook.png 'github WebHook' %}
 

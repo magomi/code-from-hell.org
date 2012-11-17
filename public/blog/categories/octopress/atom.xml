@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Code from Hell]]></title>
   <link href="http://code-from-hell.org/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://code-from-hell.org/"/>
-  <updated>2012-11-17T15:35:33+01:00</updated>
+  <updated>2012-11-17T18:33:04+01:00</updated>
   <id>http://code-from-hell.org/</id>
   <author>
     <name><![CDATA[Marco Grunert]]></name>
@@ -35,37 +35,90 @@
 <ul>
 <li><p>  ein Skript, dass ins lokale Repository auf dem Webserver wechselt und via "git pull..." den aktuellen Stand auscheckt</p>
 
-<pre><code> #!/bin/sh
-
- cd /home/serveradmin/website/codefromhell/
- git pull --rebase
- cd -
-</code></pre></li>
+<p> <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>update_code-from-hell.org.sh  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;h1&gt;!/bin/sh&lt;/h1&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;cd /home/serveradmin/website/codefromhell/
+</span><span class='line'>git pull --rebase
+</span><span class='line'><span class="nb">cd</span> -
+</span><span class='line'>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p></li>
 <li><p>  einen Mini-Webserver, der von einem Github-Hook angesprochen werden kann und das update-Skript aufruft</p>
 
-<pre><code> require 'socket'
+<p> <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>httpsrv.rb  </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;socket&#39;</span><span class="o">&lt;</span><span class="sr">/p&gt;&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/ul&gt;</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;server = TCPServer.new(2000)&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="si">}</span><span class="s2"> - listener started&quot;</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;while (session = server.accept)</span>
+</span><span class='line'><span class="sr">   session.print &quot;HTTP/</span><span class="mi">1</span><span class="o">.</span><span class="mi">1</span> <span class="mi">200</span> <span class="no">OK</span><span class="p">\</span><span class="n">r</span><span class="p">\</span><span class="n">n</span><span class="c1">#{Time.now}\r\nServer: UpdateNotificationListener\r\nContent-Type: text/html\r\n\r\n&quot;</span>
+</span><span class='line'>   <span class="n">requestPars</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">gets</span><span class="o">.</span><span class="n">chomp</span><span class="o">.</span><span class="n">split</span>
+</span><span class='line'>   <span class="n">requestMethod</span> <span class="o">=</span> <span class="n">requestPars</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+</span><span class='line'>   <span class="n">requestUrl</span> <span class="o">=</span> <span class="n">requestPars</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+</span><span class='line'>   <span class="n">requestProt</span> <span class="o">=</span> <span class="n">requestPars</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span>
+</span><span class='line'>   <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="si">}</span><span class="s2"> - request recieved: </span><span class="si">#{</span><span class="n">requestMethod</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">requestUrl</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">requestProt</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>   <span class="k">if</span> <span class="n">requestMethod</span> <span class="o">==</span> <span class="s2">&quot;POST&quot;</span> <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span> <span class="n">requestUrl</span> <span class="o">==</span> <span class="s2">&quot;/checkForNewVersion&quot;</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;   puts &quot;</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="si">}</span><span class="sr"> - start update of the repository...&quot;</span>
+</span><span class='line'><span class="sr">   system(&#39;/</span><span class="n">home</span><span class="o">/</span><span class="n">serveradmin</span><span class="o">/</span><span class="n">website</span><span class="o">/</span><span class="n">updater</span><span class="o">/</span><span class="n">update_code</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">hell</span><span class="o">.</span><span class="n">org</span><span class="o">.</span><span class="n">sh</span><span class="err">&#39;</span><span class="p">)</span>
+</span><span class='line'>   <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="si">}</span><span class="s2"> - ...update done&quot;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>   <span class="k">end</span>
+</span><span class='line'>   <span class="n">session</span><span class="o">.</span><span class="n">print</span> <span class="s2">&quot;&lt;html&gt;thanks, bye&lt;/html&gt;&quot;</span>
+</span><span class='line'>   <span class="n">session</span><span class="o">.</span><span class="n">close</span>
+</span><span class='line'><span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt; </span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+</code></pre>
 
- server = TCPServer.new(2000)
+<ul>
+<li><p>  einen github-WebHook, der auf die passende URL zeigt:</p>
 
- puts "#{Time.now} - listener started"
-
- while (session = server.accept)
-     session.print "HTTP/1.1 200 OK\r\n#{Time.now}\r\nServer: UpdateNotificationListener\r\nContent-Type: text/html\r\n\r\n"
-     requestPars = session.gets.chomp.split
-     requestMethod = requestPars[0]
-     requestUrl = requestPars[1]
-     requestProt = requestPars[2]
-     puts "#{Time.now} - request recieved: #{requestMethod} #{requestUrl} #{requestProt}"
-     if requestMethod == "POST" &amp;&amp; requestUrl == "/checkForNewVersion"
-         puts "#{Time.now} - start update of the repository..."
-         system('/home/serveradmin/website/updater/update_code-from-hell.org.sh')
-         puts "#{Time.now} - ...update done"
-     end 
-     session.print "&lt;html&gt;thanks, bye&lt;/html&gt;"
-     session.close
- end
-</code></pre></li>
-<li><p>  einen github-WebHook, der auf die passende URL zeigt: http://code-from-hell.org:2000/checkForNewVersion</p></li>
+<p>  <img src="/images/code-from-hell/webhook.png" title="'github WebHook'" ></p></li>
 </ul>
 
 ]]></content>
