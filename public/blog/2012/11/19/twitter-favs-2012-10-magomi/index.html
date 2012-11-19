@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Code from Hell</title>
+  <title>Twitter Favs 2012-10 (magomi) - Code from Hell</title>
   <meta name="author" content="Marco Grunert">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://code-from-hell.org/">
+  <link rel="canonical" href="http://code-from-hell.org/blog/2012/11/19/twitter-favs-2012-10-magomi/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
    <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -61,15 +61,12 @@
 </nav> -->
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/11/19/twitter-favs-2012-10-magomi/">Twitter Favs 2012-10 (Magomi)</a></h1>
+      <h1 class="entry-title">Twitter Favs 2012-10 (Magomi)</h1>
     
     
       <p class="meta">
@@ -87,14 +84,14 @@
 
 <time datetime="2012-11-19T07:08:00+01:00" pubdate data-updated="true">Nov 19<span>th</span>, 2012</time>
         
-         | <a href="/blog/2012/11/19/twitter-favs-2012-10-magomi/#disqus_thread">Comments</a>
+         | <a href="#disqus_thread">Comments</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>A simulated OSX desktop and boot screen&#8230; with CSS, HTML and Javascript&#8230; wow. <a href="http://t.co/LdtLPYOp" title="http://bit.ly/Skk9M7">bit.ly/Skk9M7</a></p>&mdash; Michael Hobson (@TremulantDesign) <a href="https://twitter.com/TremulantDesign/status/263681759319818240" data-datetime="2012-10-31T16:40:05+00:00">Oktober 31, 2012</a></blockquote>
+<div class="entry-content"><div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>A simulated OSX desktop and boot screen&#8230; with CSS, HTML and Javascript&#8230; wow. <a href="http://t.co/LdtLPYOp" title="http://bit.ly/Skk9M7">bit.ly/Skk9M7</a></p>&mdash; Michael Hobson (@TremulantDesign) <a href="https://twitter.com/TremulantDesign/status/263681759319818240" data-datetime="2012-10-31T16:40:05+00:00">Oktober 31, 2012</a></blockquote>
 <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
 
@@ -214,151 +211,16 @@
 <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/17/octopress-blog-im-github-repository-verwalten/">Octopress-Blog Im Github-Repository Verwalten</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Marco Grunert</span></span>
 
-<time datetime="2012-11-17T14:07:00+01:00" pubdate data-updated="true">Nov 17<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/11/17/octopress-blog-im-github-repository-verwalten/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Das gesamte Blog kann an sich ohne weiteres in einem Github-Repository verwaltet werden:</p>
-
-<ul>
-<li>  neues Repository auf GitHub einrichten,</li>
-<li>  im lokalen Octopress-Verzeichnis die URL des Repositories setzten (&#8220;git init &amp;&amp; git config remote.origin.url &lt;url.des.github.repo>&#8221;),</li>
-<li>  den initialen Stand commiten (&#8220;git add . &amp;&amp; git commit -a -m &#8216;&lt;commit.message>&#8217;&#8221;),</li>
-<li>  den aktuellen Stand auf den Server pushen (&#8220;git push origin master:master&#8221;).</li>
-</ul>
-
-
-<p>In den Admin-Einstellungen des Repositories auf GitHub kann man andere Nutzer mit Schreibberechtigung hinzufügen. Fertig ist das Mehrbenutzer-Blog.</p>
-
-<p>Das Deployment auf dem Zielserver kann auch direkt aus dem github-Repository erfolgen. Leider geht das nicht ganz so komfortabel, wie wenn man das Blog direkt via <a href="http://octopress.org/docs/deploying/github/">github-Pages betreibt</a>. Der eigentliche Inhalt des Blogs liegt im Unterverzeichnis &#8220;public&#8221;. Grundsätzlich würde es also ausreichen, dieses Unterverzeichnis auszuchecken. Derartige sparse clones werden von git nicht unterstützt. Bleibt also nur, das gesamte Repository auf dem Zielserver auszuchecken und den Webserver nur auf das public Verzeichnis verweisen zu lassen. Einer der großen Vorteile, den Blog auf github-Pages zu betreiben liegt darin, dass bei einem push ins Repository auch gleich der Blogcontent aktualisiert wird. Mit einem kleinen Skript und einem Github-Hook lässt sich das aber recht einfach auf dem eigenen Server nachbauen. Man nehme:</p>
-
-<ul>
-<li>  ein Skript, dass ins lokale Repository auf dem Webserver wechselt und via &#8220;git pull&#8230;&#8221; den aktuellen Stand auscheckt</li>
-</ul>
-
-
-<figure class='code'><figcaption><span>update_code-from-hell.org.sh  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/bin/sh</span>
-</span><span class='line'><span class="nb">cd</span> /home/serveradmin/website/codefromhell/
-</span><span class='line'>git pull --rebase
-</span><span class='line'><span class="nb">cd</span> -
-</span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>  einen Mini-Webserver, der von einem Github-Hook angesprochen werden kann und das update-Skript aufruft</li>
-</ul>
-
-
-<figure class='code'><figcaption><span>httpsrv.rb  </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;socket&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="n">server</span> <span class="o">=</span> <span class="no">TCPServer</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="si">}</span><span class="s2"> - listener started&quot;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">while</span> <span class="p">(</span><span class="n">session</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">accept</span><span class="p">)</span>
-</span><span class='line'>   <span class="n">session</span><span class="o">.</span><span class="n">print</span> <span class="s2">&quot;HTTP/1.1 200 OK</span><span class="se">\r\n</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="si">}</span><span class="se">\r\n</span><span class="s2">Server: UpdateNotificationListener</span><span class="se">\r\n</span><span class="s2">Content-Type: text/html</span><span class="se">\r\n\r\n</span><span class="s2">&quot;</span>
-</span><span class='line'>   <span class="n">requestPars</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">gets</span><span class="o">.</span><span class="n">chomp</span><span class="o">.</span><span class="n">split</span>
-</span><span class='line'>   <span class="n">requestMethod</span> <span class="o">=</span> <span class="n">requestPars</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
-</span><span class='line'>   <span class="n">requestUrl</span> <span class="o">=</span> <span class="n">requestPars</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
-</span><span class='line'>   <span class="n">requestProt</span> <span class="o">=</span> <span class="n">requestPars</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span>
-</span><span class='line'>   <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="si">}</span><span class="s2"> - request recieved: </span><span class="si">#{</span><span class="n">requestMethod</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">requestUrl</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">requestProt</span><span class="si">}</span><span class="s2">&quot;</span>
-</span><span class='line'>   <span class="k">if</span> <span class="n">requestMethod</span> <span class="o">==</span> <span class="s2">&quot;POST&quot;</span> <span class="o">&amp;&amp;</span> <span class="n">requestUrl</span> <span class="o">==</span> <span class="s2">&quot;/checkForNewVersion&quot;</span>
-</span><span class='line'>       <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="si">}</span><span class="s2"> - start update of the repository...&quot;</span>
-</span><span class='line'>       <span class="nb">system</span><span class="p">(</span><span class="s1">&#39;/home/serveradmin/website/updater/update_code-from-hell.org.sh&#39;</span><span class="p">)</span>
-</span><span class='line'>       <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="si">}</span><span class="s2"> - ...update done&quot;</span>
-</span><span class='line'>   <span class="k">end</span>
-</span><span class='line'>   <span class="n">session</span><span class="o">.</span><span class="n">print</span> <span class="s2">&quot;&lt;html&gt;thanks, bye&lt;/html&gt;&quot;</span>
-</span><span class='line'>   <span class="n">session</span><span class="o">.</span><span class="n">close</span>
-</span><span class='line'><span class="k">end</span>
-</span><span class='line'>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><p>  einen github-WebHook, der auf die passende URL zeigt:</p>
-
-<p>  <img src="/images/code-from-hell/webhook.png" title="'github WebHook'" ></p></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/11/11/leseliste-seven-languages-in-seven-weeks/">Leseliste - Seven Languages in Seven Weeks</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -370,39 +232,44 @@
   
 
 
-<time datetime="2012-11-11T19:52:00+01:00" pubdate data-updated="true">Nov 11<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/11/11/leseliste-seven-languages-in-seven-weeks/#disqus_thread">Comments</a>
-        
-      </p>
+<time datetime="2012-11-19T07:08:00+01:00" pubdate data-updated="true">Nov 19<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/favs/'>favs</a>, <a class='category' href='/blog/categories/twitter/'>twitter</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>Das Lernen neuer (Programmier-)Sprachen geht wesentlich besser von der Hand, wenn man erstmal einen einfachen Einstieg in die Basics bekommen hat. Der Einstieg muss nicht sonderlich tief sein. Wichtig ist es, schnell zu ersten Erfolgserlebnissen in Form kleiner, lauffähiger Programme zu kommen. Darauf baut es sich leicht auf, ohne dass irgendwo auf dem Weg allzu großer Frust aufkommt. Ich halte Weniges für schlimmer als sich erstmal durch große Mengen Specs wühlen zu müssen ehe man mit den ersten Codieraufgaben anfangen kann.</p>
-
-<p>Ich nehme an, für nahezu jede Programmiersprache findet sich ein entsprechendes Tutorial im Netz. Noch besser aber, wenn sich jemand mit genau diesem Ansatz - einen kurzen und knappen, aber ausbaufähigen Schnelleinstieg in verschiedene Programmiersprachen zu bieten - hingesetzt hat und fuer mehrere Sprachen ein passendes Buch geschrieben hat. <a href="http://www.amazon.de/gp/product/193435659X/ref=as_li_qf_sp_asin_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=193435659X&linkCode=as2&tag=pu09c-21">Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages (Pragmatic Programmers)</a><img src="http://www.assoc-amazon.de/e/ir?t=pu09c-21&l=as2&o=3&a=193435659X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /><sup>1</sup> bietet genau das. Kurzer Einstieg in Sprachen wir Ruby, Prolog, Scala oder Erlang.</p>
-
-<p>Die angesprochenen 7 Wochen für 7 Sprachen sind sehr arbeitnehmerfreundlich. Ich liege gerade mit defektem Knie rum und mehr als 5 Stunden für den Schnelleinstieg in Ruby musste ich nicht investieren. Man kann den Übungen sicher noch mehr Aufmerksamkeit widmen. Dann sollten aber auch nicht mehr als 8 h Aufwand für eine Sprache notwendig sein. Parallel zur täglichen Arbeit lässt sich das sehr gut über eine Woche verteilen.</p>
-
-<p>Der Schnelleinstieg in Ruby kam mir gerade zupass weil ich mir für die Serverkonfiguration in unserer Firma <a href="http://puppetlabs.com/puppet/what-is-puppet/">Puppet</a> aneignen muss. Puppet selbst ist in Ruby geschrieben und für unserere teils recht speziellen Anforderungen sind eigene Plugins und Erweiterungen zu entwicklen.</p>
-
-<p>Neben dem Einstieg in eine konkrete Sprache ist das Buch auch ein netter Begleiter für die <a href="http://martinfowler.com/bliki/OneLanguage.html">Learn-A-Language-Every-Year</a>-Bewegung. Einfach mal den Horizont erweitern kann nicht schaden. Allein schon die Konzepte anderer Sprachen kennenzulernen hilft einem ganz gut, die &#8220;eigene&#8221; Sprache besser zu verstehen und besser anzuwenden.</p>
-
-<p><sup>1</sup> Affiliate-Link zu Amazon</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://code-from-hell.org/blog/2012/11/19/twitter-favs-2012-10-magomi/" data-via="magomi" data-counturl="http://code-from-hell.org/blog/2012/11/19/twitter-favs-2012-10-magomi/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/11/17/octopress-blog-im-github-repository-verwalten/" title="Previous Post: Octopress-Blog im Github-Repository verwalten">&laquo; Octopress-Blog im Github-Repository verwalten</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -427,7 +294,7 @@
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/magomi">@magomi</a> on GitHub
@@ -457,7 +324,7 @@
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -473,7 +340,7 @@
 
 <section>
   <h1>My Pinboard</h1>
-  <ul id="pinboard_linkroll">Fetching linkroll&#8230;</ul>
+  <ul id="pinboard_linkroll">Fetching linkroll...</ul>
   <p><a href="http://pinboard.in/u:emge">My Pinboard Bookmarks &raquo;</a></p>
 </section>
 <script type="text/javascript">
@@ -495,6 +362,7 @@
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -509,7 +377,10 @@
       var disqus_shortname = 'codefromhell';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://code-from-hell.org/blog/2012/11/19/twitter-favs-2012-10-magomi/';
+        var disqus_url = 'http://code-from-hell.org/blog/2012/11/19/twitter-favs-2012-10-magomi/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

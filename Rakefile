@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "twavs"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -86,6 +87,39 @@ task :preview do
   }
 
   [jekyllPid, compassPid, rackupPid].each { |pid| Process.wait(pid) }
+end
+
+# usage rake new_twavs_post[yyyy, mm, screen_name, oauth_token, oauth_token_secret]
+desc "Create a new post containing the twitter favs of the given user for the given month."
+task :new_twavs_post, :year, :mon, :screen_name, :oauth_token, :oauth_token_secret do |t, args|
+  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(source_dir)
+  mkdir_p "#{source_dir}/#{posts_dir}"
+  year = args.year
+  mon = args.mon
+  oauth_token = args.oauth_token
+  oauth_token_secret  = args.oauth_token_secret
+  screen_name = args.screen_name
+  title = 'Twitter Favs ' + year + '-' + mon + ' (' + screen_name + ')'
+  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  puts "Creating new post: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: post"
+    post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "comments: true"
+    post.puts "categories: [\"twitter\", \"favs\"]"
+    post.puts "---"
+
+    Twavs.new(Integer(year), Integer(mon), screen_name, oauth_token, oauth_token_secret).favs.each do |fav|
+      post.puts "{% tweet http://twitter.com/#{fav[0]}/statuses/#{fav[1]} %}"
+    end
+    puts Twavs.new(year, mon, screen_name, oauth_token, oauth_token_secret).favs
+  end
+
 end
 
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")

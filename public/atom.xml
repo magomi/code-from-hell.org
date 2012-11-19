@@ -4,7 +4,7 @@
   <title><![CDATA[Code from Hell]]></title>
   <link href="http://code-from-hell.org/atom.xml" rel="self"/>
   <link href="http://code-from-hell.org/"/>
-  <updated>2012-11-17T18:33:04+01:00</updated>
+  <updated>2012-11-19T07:18:04+01:00</updated>
   <id>http://code-from-hell.org/</id>
   <author>
     <name><![CDATA[Marco Grunert]]></name>
@@ -12,6 +12,133 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Twitter Favs 2012-10 (magomi)]]></title>
+    <link href="http://code-from-hell.org/blog/2012/11/19/twitter-favs-2012-10-magomi/"/>
+    <updated>2012-11-19T07:08:00+01:00</updated>
+    <id>http://code-from-hell.org/blog/2012/11/19/twitter-favs-2012-10-magomi</id>
+    <content type="html"><![CDATA[<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>A simulated OSX desktop and boot screen&#8230; with CSS, HTML and Javascript&#8230; wow. <a href="http://t.co/LdtLPYOp" title="http://bit.ly/Skk9M7">bit.ly/Skk9M7</a></p>&mdash; Michael Hobson (@TremulantDesign) <a href="https://twitter.com/TremulantDesign/status/263681759319818240" data-datetime="2012-10-31T16:40:05+00:00">Oktober 31, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>tcpdump -c1 -vv src host remote.host |egrep -o &#8220;TS val [0-9]+&#8221;|awk &#8216;{n=$3/100/86400; print n &#8220;, &#8221; n/2.5 &#8221; or &#8221; n/10 &#8221; days&#8221;}&#8217; # host uptime</p>&mdash; Command Line Magic (@climagic) <a href="https://twitter.com/climagic/status/263370540813803520" data-datetime="2012-10-30T20:03:24+00:00">Oktober 30, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Stashboard was clearly inspired by @<a href="https://twitter.com/svenfuchs">svenfuchs</a>: <a href="http://t.co/CpP687Rj" title="http://www.stashboard.org">stashboard.org</a> (h/t @<a href="https://twitter.com/aka">aka</a> and @<a href="https://twitter.com/_lennart">_lennart</a>)</p>&mdash; Mathias Meyer (@roidrage) <a href="https://twitter.com/roidrage/status/263345800573239297" data-datetime="2012-10-30T18:25:06+00:00">Oktober 30, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>This looks awesome! Goes into my endless learning queue. <a href="http://t.co/CuaMPF5P" title="http://natureofcode.com/book/">natureofcode.com/book/</a></p>&mdash; Rahul Goma Phulore(@missingfaktor) <a href="https://twitter.com/missingfaktor/status/262656631874154496" data-datetime="2012-10-28T20:46:35+00:00">Oktober 28, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Wicket 6 und JQuery - Dream Team in Action <a href="http://t.co/P2BcaDXt" title="http://wp.me/plM0B-jS">wp.me/plM0B-jS</a></p>&mdash; madi (@dilgerma) <a href="https://twitter.com/dilgerma/status/262174402488197121" data-datetime="2012-10-27T12:50:23+00:00">Oktober 27, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Living on the Java edge on Mac OS X <a href="http://t.co/heRVsJMh" title="http://julien.ponge.info/notes/living-on-the-java-edge-on-macosx/">julien.ponge.info/notes/living-o…</a> via @<a href="https://twitter.com/jponge">jponge</a></p>&mdash; Julien Ponge(@jponge) <a href="https://twitter.com/jponge/status/261843977483993090" data-datetime="2012-10-26T14:57:23+00:00">Oktober 26, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Great,@<a href="https://twitter.com/henrikkniberg">henrikkniberg</a> in action, beautifully designed and very well done <a href="http://t.co/klMLbxad" title="http://blog.crisp.se/2012/10/25/henrikkniberg/agile-product-ownership-in-a-nutshell">blog.crisp.se/2012/10/25/hen…</a></p>&mdash; madi (@dilgerma) <a href="https://twitter.com/dilgerma/status/261712579683053568" data-datetime="2012-10-26T06:15:16+00:00">Oktober 26, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p><a href="https://twitter.com/search/%23wicket">#wicket</a> pivottable report (haven&#8217;t tried in prod though): · GitHub <a href="http://t.co/lOdaSXcj" title="http://bit.ly/QJo0Tb">bit.ly/QJo0Tb</a></p>&mdash; Andrey Belyaev (@belyaev_andrey) <a href="https://twitter.com/belyaev_andrey/status/261706916793815040" data-datetime="2012-10-26T05:52:45+00:00">Oktober 26, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>ca w!! w !sudo tee &gt; /dev/null &#8220;%&#8221; # You can put a command mode abbreviation in .vimrc for the last command to w!! in vim. Safer and easier.</p>&mdash; Command Line Magic (@climagic) <a href="https://twitter.com/climagic/status/261480161327869952" data-datetime="2012-10-25T14:51:43+00:00">Oktober 25, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Writing Plugins for IntelliJ IDEA. Part I <a href="http://t.co/itcsAveN" title="http://bit.ly/XlTm5X">bit.ly/XlTm5X</a></p>&mdash; IntelliJ IDEA (@intellijidea) <a href="https://twitter.com/intellijidea/status/261442956161064960" data-datetime="2012-10-25T12:23:52+00:00">Oktober 25, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Some screencasts for <a href="https://twitter.com/search/%23Apache">#Apache</a> <a href="https://twitter.com/search/%23Wicket">#Wicket</a> beginners at <a href="http://t.co/pIQ95ADj" title="http://www.youtube.com/user/liamar01?feature=watch">youtube.com/user/liamar01?…</a></p>&mdash; Martin Grigorov (@mtgrigorov) <a href="https://twitter.com/mtgrigorov/status/261225134130601984" data-datetime="2012-10-24T21:58:19+00:00">Oktober 24, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p><a href="http://t.co/EItgZh1U" title="http://bit.ly/vimscripting">bit.ly/vimscripting</a> # Damian Conway of Perl fame wrote this great 5-part series of beginners tutorials on vim scripting.</p>&mdash; Command Line Magic (@climagic) <a href="https://twitter.com/climagic/status/261191959538958336" data-datetime="2012-10-24T19:46:30+00:00">Oktober 24, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Added <a href="https://twitter.com/search/%23CoffeeScript">#CoffeeScript</a> support to <a href="https://twitter.com/search/%23wicketless">#wicketless</a> Simple to use with <a href="https://twitter.com/search/%23wicket">#wicket</a> Checkout at github <a href="http://t.co/cv0Fcabp" title="http://bit.ly/TtYkbj">bit.ly/TtYkbj</a></p>&mdash; Martin Sturm (@RoadRunner12048) <a href="https://twitter.com/RoadRunner12048/status/261176627688534016" data-datetime="2012-10-24T18:45:35+00:00">Oktober 24, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Sehr cool: <a href="http://t.co/egCgvEQO" title="http://www.ohrka.de/">ohrka.de</a> Hörspiele für Kinder zum ganz legal downloaden</p>&mdash; Anne Roth (@annalist) <a href="https://twitter.com/annalist/status/259969218638909440" data-datetime="2012-10-21T10:47:46+00:00">Oktober 21, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>The 6 Stages of Debugging: That can&#8217;t happen. That shouldn&#8217;t happen. Hmmm, weird. Why does that happen? Oh, I see. How did that ever work?”</p>&mdash; Ray Percival (@scarynetworkguy) <a href="https://twitter.com/scarynetworkguy/status/259638471830949889" data-datetime="2012-10-20T12:53:30+00:00">Oktober 20, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Remote worker vs distributed team: <a href="http://t.co/aF4ixs9e" title="http://bob.mcwhirter.org/blog/2010/09/13/remote-worker-distributed-team/">bob.mcwhirter.org/blog/2010/09/1…</a> (via @<a href="https://twitter.com/mwessendorf">mwessendorf</a> )</p>&mdash; Jon Tirsen (@tirsen) <a href="https://twitter.com/tirsen/status/259591639612395520" data-datetime="2012-10-20T09:47:24+00:00">Oktober 20, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Very Cool! —&#8211;&gt; “who said that kanban board should have straight lines?” <a href="http://t.co/UvkDy8HQ" title="http://twitter.com/mdeocto/status/258854242289348608/photo/1">twitter.com/mdeocto/status…</a>” via/@<a href="https://twitter.com/mdeocto">mdeocto</a></p>&mdash; Lauren Harrison (@Lozingers) <a href="https://twitter.com/Lozingers/status/259559002042671104" data-datetime="2012-10-20T07:37:43+00:00">Oktober 20, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p><a href="https://twitter.com/search/%23ApacheCon">#ApacheCon</a> <a href="https://twitter.com/search/%23Europe">#Europe</a> highlight: &#8221;<a href="https://twitter.com/search/%23Wicket">#Wicket</a> - where do we go from here?&#8221; w/Sven Meier <a href="http://t.co/6YclvgjM" title="http://www.apachecon.eu/schedule/">apachecon.eu/schedule/</a> <a href="https://twitter.com/search/%23enterprise">#enterprise</a> <a href="https://twitter.com/search/%23computing">#computing</a> <a href="https://twitter.com/search/%23conference">#conference</a></p>&mdash; ApacheCon (@ApacheCon) <a href="https://twitter.com/ApacheCon/status/258967147605278720" data-datetime="2012-10-18T16:25:54+00:00">Oktober 18, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>for f in ~/DCIM/*; do [ -e &#8220;/archive/${f/*\/}&#8221; ] || echo &#8220;$f&#8221;; done # List out any photos that aren&#8217;t in the /archive dir yet.</p>&mdash; Command Line Magic (@climagic) <a href="https://twitter.com/climagic/status/258650517469794304" data-datetime="2012-10-17T19:27:43+00:00">Oktober 17, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Checkout latest version of <a href="https://twitter.com/search/%23wicket">#wicket</a> <a href="https://twitter.com/search/%23less">#less</a> <a href="https://twitter.com/search/%23css">#css</a> integration on github. No final, but works quit nice! <a href="http://t.co/cv0Fcabp" title="http://bit.ly/TtYkbj">bit.ly/TtYkbj</a></p>&mdash; Martin Sturm (@RoadRunner12048) <a href="https://twitter.com/RoadRunner12048/status/258348464809861120" data-datetime="2012-10-16T23:27:28+00:00">Oktober 16, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>If you _ever_ do presentations, you need this: the Presentation Patterns Projector Sanity Test. You&#8217;re welcome. <a href="http://t.co/GIRqysnB" title="http://bit.ly/QOiCx5">bit.ly/QOiCx5</a></p>&mdash; Neal Ford (@neal4d) <a href="https://twitter.com/neal4d/status/258184432161288192" data-datetime="2012-10-16T12:35:40+00:00">Oktober 16, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>An excellent read on Test Driven Development with Apache Wicket and the Spring Framework: <a href="http://t.co/PCqNEZzr" title="http://blog.comsysto.com/2010/06/04/test-driven-development-with-apache-wicket-and-spring-framework/">blog.comsysto.com/2010/06/04/tes…</a></p>&mdash; Michael (@bitboss) <a href="https://twitter.com/bitboss/status/257081082430775296" data-datetime="2012-10-13T11:31:21+00:00">Oktober 13, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>@<a href="https://twitter.com/javaoneconf">javaoneconf</a> presentation: How <a href="https://twitter.com/search/%23Scala">#Scala</a>, <a href="https://twitter.com/search/%23Wicket">#Wicket</a> &amp; <a href="https://twitter.com/search/%23JavaEE">#JavaEE</a> can improve web development <a href="http://t.co/z5CbbDtC" title="http://slidesha.re/SP2vOQ">slidesha.re/SP2vOQ</a> via <a href="https://twitter.com/search/%23Java">#Java</a> developer @<a href="https://twitter.com/brunoborges">brunoborges</a></p>&mdash; JRebel (@javarebel) <a href="https://twitter.com/javarebel/status/256043048797089793" data-datetime="2012-10-10T14:46:34+00:00">Oktober 10, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Just blogged: Deploying <a href="https://twitter.com/search/%23wicket">#wicket</a> Java webapp on <a href="https://twitter.com/search/%23Jelastic">#Jelastic</a> - my thoughts and impresions: <a href="http://t.co/RIzrWnTC" title="http://tomaszdziurko.pl/2012/10/deploying-java-web-application-jelastic/">tomaszdziurko.pl/2012/10/deploy…</a></p>&mdash; Tomasz Dziurko (@TomaszDziurko) <a href="https://twitter.com/TomaszDziurko/status/255757444733624321" data-datetime="2012-10-09T19:51:41+00:00">Oktober 9, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>inspiring presentation on design <a href="https://t.co/LubyjPzI" title="https://speakerdeck.com/u/kneath/p/design-hacks-for-the-pragmatic-minded">speakerdeck.com/u/kneath/p/des…</a> (via @<a href="https://twitter.com/coastalchief">coastalchief</a>)</p>&mdash; Dr. Gernot Starke (@gernotstarke) <a href="https://twitter.com/gernotstarke/status/254471079760887809" data-datetime="2012-10-06T06:40:07+00:00">Oktober 6, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Bestest, newest, coolest, hottest book from @<a href="https://twitter.com/manningbooks">manningbooks</a>: <a href="https://twitter.com/search/%23MissingInAction">#MissingInAction</a> cover: <a href="http://t.co/hldMNWrM" title="http://twitter.com/dashorst/status/254236427599106048/photo/1">twitter.com/dashorst/statu…</a></p>&mdash; Martijn Dashorst (@dashorst) <a href="https://twitter.com/dashorst/status/254236427599106048" data-datetime="2012-10-05T15:07:43+00:00">Oktober 5, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>These Ctrl-Alt-Delete coffee cups are so cool they might just top our holiday wish list: <a href="http://t.co/zV3Cs6rH" title="http://ow.ly/eazoW">ow.ly/eazoW</a></p>&mdash; The Springpad Team (@springpad) <a href="https://twitter.com/springpad/status/253527496585248768" data-datetime="2012-10-03T16:10:40+00:00">Oktober 3, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Join us for Free Online NodeStack Conference to explore Node.js, MongoDB, and SmartOS to build lean apps <a href="https://twitter.com/search/%23NodeStack">#NodeStack</a> <a href="http://t.co/P6CZ47xP" title="http://soc.ai/1wr">soc.ai/1wr</a></p>&mdash; MongoDB (@MongoDB) <a href="https://twitter.com/MongoDB/status/253480535375110144" data-datetime="2012-10-03T13:04:03+00:00">Oktober 3, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>Check out our new video about JPA and Hibernate Support in IntelliJ IDEA <a href="http://t.co/AD6LkcA5" title="http://www.youtube.com/watch?v=bGl4u44WRiI">youtube.com/watch?v=bGl4u4…</a></p>&mdash; IntelliJ IDEA (@intellijidea) <a href="https://twitter.com/intellijidea/status/253436318124765184" data-datetime="2012-10-03T10:08:21+00:00">Oktober 3, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+
+<div class='embed tweet'><blockquote class="twitter-tweet" lang="de"><p>you&#8217;re right, it can not be unseen :) RT @<a href="https://twitter.com/peakscale">peakscale</a>: @<a href="https://twitter.com/jstrachan">jstrachan</a> So should this: <a href="http://t.co/DPJd2SuZ" title="http://www.youtube.com/watch?v=Mk3qkQROb_k">youtube.com/watch?v=Mk3qkQ…</a></p>&mdash; James Strachan (@jstrachan) <a href="https://twitter.com/jstrachan/status/252801623171137536" data-datetime="2012-10-01T16:06:18+00:00">Oktober 1, 2012</a></blockquote>
+<script src="http://code-from-hell.org//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress-Blog im Github-Repository verwalten]]></title>
@@ -109,20 +236,6 @@
 
 <p>  <img src="http://code-from-hell.org/images/code-from-hell/webhook.png" title="'github WebHook'" ></p></li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Twitter Favs]]></title>
-    <link href="http://code-from-hell.org/blog/2012/11/11/twitter-favs/"/>
-    <updated>2012-11-11T19:52:00+01:00</updated>
-    <id>http://code-from-hell.org/blog/2012/11/11/twitter-favs</id>
-    <content type="html"><![CDATA[<p><a class="twitter-timeline" href="https://twitter.com/magomi/favorites" data-widget-id="267696520365752320">Favorite Tweets by @magomi</a></p>
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-
 
 ]]></content>
   </entry>
